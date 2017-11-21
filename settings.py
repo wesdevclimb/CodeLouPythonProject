@@ -55,7 +55,7 @@ ROOT_URLCONF = 'CalorieTracker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'CalorieTracker/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'CalorieTracker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'CalorieTracker/db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'CalorieTracker/CalorieTracker/db.sqlite3'),
     }
 }
 
@@ -121,5 +121,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'CalorieTracker/static'),
 )
