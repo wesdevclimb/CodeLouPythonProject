@@ -19,12 +19,12 @@ from django.contrib import admin
 from CalorieTracker import views
 
 urlpatterns = patterns('',
-  url(r'^$', views.BookList.as_view(), name='book_list'),
+  url(r'^booklist$', views.BookList.as_view(), name='book_list'),
   url(r'^new$', views.BookCreate.as_view(), name='book_new'),
   url(r'^edit/(?P<pk>\d+)$', views.BookUpdate.as_view(), name='book_edit'),
   url(r'^delete/(?P<pk>\d+)$', views.BookDelete.as_view(), name='book_delete'),
   url(r'^enter$', views.FoodDescriptionCreate.as_view(), name='fooddescription_new'),
-  url(r'^enterread$', views.FoodDescriptionList.as_view(), name='fooddescription_list'),
+  url(r'^$', views.FoodDescriptionList.as_view(), name='fooddescription_list'),
   url(r'^enteredit/(?P<pk>\d+)$', views.FoodDescriptionUpdate.as_view(), name='fooddescription_edit'),
   url(r'^deleteenter/(?P<pk>\d+)$', views.FoodDescriptionDelete.as_view(), name='fooddescription_delete')
 )
