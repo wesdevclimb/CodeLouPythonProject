@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'CalorieTracker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'CalorieTracker/CalorieTracker/db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'CodeLouPythonProject/db.sqlite3'),
     }
 }
 
