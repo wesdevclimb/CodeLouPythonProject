@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>CalorieTracker</h1>
+<ul>
+    {% for fooddescription in object_list %}
+    <li>"{{ fooddescription.com_name }}" has {{ fooddescription.protein_factor }} grams of protein, {{ fooddescription.fat_factor }} grams of fat, and {{ fooddescription.cho_factor }} grams of carbs
+    <a href="{% url 'fooddescription_edit' fooddescription.id %}">edit</a>
+    <a href="{% url 'fooddescription_delete' fooddescription.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'fooddescription_new' %}">New</a>
+{% endblock %}
